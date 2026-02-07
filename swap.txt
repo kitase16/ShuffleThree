@@ -1,0 +1,6 @@
+a=any
+b=any
+
+xor a b
+xor b a
+xor a b

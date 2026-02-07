@@ -11,7 +11,11 @@ void SwapXor(int &x, int &y) {
 	y ^= x;
 	y ^= temp;
 }
-
+void SwapXor2(int &x, int &y) {
+	x ^= y;
+	y ^= x;
+	x ^= y;
+}
 void SwapPtr(int *x, int *y) {
 	int temp = *x;
 	*x = *y;
@@ -62,7 +66,7 @@ void sort(int* ptr[], int size) {
 
 int main() {
 	//srand((unsigned int)time(NULL));
-	srand(0); // For consistent testing
+	srand(4); // For consistent testing
 	int  A, B, C, D;
 	std::cout << "Input four value." << std::endl;
 	std::cout << "And Random?" << std::endl;
@@ -88,7 +92,7 @@ int main() {
 		return 1;
 	}
 
-	SwapXor(*ptr[x], *ptr[y]);
+	SwapXor2(*ptr[x], *ptr[y]);
 	ShowABCD(A, B, C, D);
 
 	std::cout << std::endl;
